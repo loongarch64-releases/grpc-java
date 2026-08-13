@@ -1,0 +1,12 @@
+FROM lcr.loongnix.cn/library/debian:unstable-slim
+
+RUN apt-get update && apt-get install -y \
+    git \
+    wget \
+    unzip \
+    ca-certificates \
+    build-essential \
+    pkgconf \
+    && rm -rf /var/lib/apt/lists/*
+
+CMD ["/bin/bash"]
