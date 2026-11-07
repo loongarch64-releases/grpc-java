@@ -1,6 +1,8 @@
 name: Auto Build grpc-java (Self-hosted)
 
 on:
+  schedule:
+    - cron: '24 8 * * *'
   workflow_dispatch:
 
 env:
